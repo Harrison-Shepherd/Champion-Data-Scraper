@@ -1,0 +1,18 @@
+{
+  "player_fields": {
+    "required_fields": [
+      "playerId",
+      "sportId",
+      "squadId",
+      "squadName",
+      "uniquePlayerId",
+      "uniqueSquadId"
+    ],
+    "optional_fields": [
+      "displayName",
+      "firstname",
+      "shortDisplayName",
+      "surname"
+    ]
+  }
+}

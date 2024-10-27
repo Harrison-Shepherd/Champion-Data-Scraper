@@ -1,0 +1,20 @@
+{
+  "score_flow_fields": {
+    "required_fields": [
+      "matchId",
+      "playerId",
+      "scoreFlowId",
+      "squadId",
+      "uniqueMatchId",
+      "uniquePlayerId"
+    ],
+    "optional_fields": [
+      "distanceCode",
+      "period",
+      "periodSeconds",
+      "positionCode",
+      "scoreName",
+      "scorepoints"
+    ]
+  }
+}
