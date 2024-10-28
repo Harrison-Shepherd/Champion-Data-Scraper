@@ -1,5 +1,8 @@
 import json
+import sys
 import os
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), os.path.pardir)))
 from DatabaseUtils.SqlConnector import connect
 import logging
 
@@ -121,3 +124,7 @@ def reconstruct_database():
     else:
         logging.error("Failed to connect to the database.")
         print("Failed to connect to the database.")
+
+
+if __name__ == "__main__":
+    reconstruct_database()

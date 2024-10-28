@@ -87,7 +87,7 @@ def scrape_entire_database():
     scraping_status["progress"] = 0
 
     try:
-        result = subprocess.run(['python', 'Scraper.py'], capture_output=True, text=True)
+        result = subprocess.run(['python', 'main.py'], capture_output=True, text=True)
         log(f"Scrape output: {result.stdout}")
         if result.stderr:
             log(f"Scrape error: {result.stderr}")
