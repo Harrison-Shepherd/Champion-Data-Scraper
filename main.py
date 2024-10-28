@@ -1,4 +1,4 @@
-from DatabaseUtils.reconstructor import reconstruct_database
+from DatabaseUtils.Reconstructor import reconstruct_database
 from DatabaseUtils.PlayerTableReconstructor import reconstruct_player_table
 from Core.Scraper import Scraper
 
@@ -7,8 +7,8 @@ Main script to handle database reconstruction, cleaning player table, and scrapi
 """
 
 if __name__ == "__main__":
-    reconstruct_player_table()
     reconstruct_database()
+    reconstruct_player_table()
 
 
 

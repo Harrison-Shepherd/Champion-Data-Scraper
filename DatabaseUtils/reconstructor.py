@@ -1,6 +1,6 @@
 import json
 import os
-from DatabaseUtils.SqlConnector import connect  # Ensure proper path for SqlConnector
+from DatabaseUtils.SqlConnector import connect
 import logging
 
 """
@@ -27,12 +27,10 @@ def drop_all_tables(connection):
         # Drop each table, except for 'static_player_info'
         for table in tables:
             table_name = table[0]
-            if table_name != 'static_player_info':
-                drop_table_query = f"DROP TABLE IF EXISTS `{table_name}`;"
-                cursor.execute(drop_table_query)
-                print(f"Dropped table: {table_name}")
-            else:
-                print(f"Skipping table: {table_name}")
+            drop_table_query = f"DROP TABLE IF EXISTS `{table_name}`;"
+            cursor.execute(drop_table_query)
+            print(f"Dropped table: {table_name}")
+
 
         # Re-enable foreign key checks after dropping the tables
         cursor.execute("SET FOREIGN_KEY_CHECKS = 1;")
