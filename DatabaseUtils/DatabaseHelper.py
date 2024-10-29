@@ -113,13 +113,11 @@ class DatabaseHelper:
 
         # Handle exceptions
         except mysql.connector.Error as err:
-            self.error_logger.error(f"MySQL error inserting data into {table_name}: {err}")
-            self.error_logger.error(f"MySQL Error Code: {err.errno}, SQLSTATE: {err.sqlstate}, Message: {err.msg}")
-            self.error_logger.error(f"Data causing error: {data_dict}")
+            self.error_logger.error(f"Error inserting into {table_name}: {err.msg}")
             self.connection.rollback()  # Rollback in case of any error
             raise  # Re-raise the exception to be handled upstream
         except Exception as e:
-            self.error_logger.error(f"Error inserting data into {table_name}: {e}. Data: {data_dict}")
+            self.error_logger.error(f"Error inserting into {table_name}: {e}")
             self.connection.rollback()  # Rollback in case of any error
             raise  # Re-raise the exception to be handled upstream
         finally:

@@ -116,7 +116,7 @@ class Match:
                 logging.error(f"'firstname' or 'surname' not found in match data for matchId: {self.match_id}.")
                 print(f"'firstname' or 'surname' not found in match data for matchId: {self.match_id}.")
     
-            print(f"Match data inserted for ID:  {self.match_id}")
+            # print(f"Match data inserted for ID:  {self.match_id}")
     
             # Store processed data
             self.data = box
