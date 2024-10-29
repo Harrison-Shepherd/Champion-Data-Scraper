@@ -15,3 +15,4 @@ if __name__ == "__main__":
     # Start the scraper after the database and player table have been prepared
     scraper = Scraper()
     scraper.scrape_entire_database()
+

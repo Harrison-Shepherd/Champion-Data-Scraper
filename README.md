@@ -113,7 +113,7 @@ To start the scraping process:
 ```bash
 python Main.py
 python CsvScraper.py
-python TestScraper.py
+python TargettedScraper.py
 ```
 This will:
 - Connect to the MySQL database.
@@ -123,7 +123,7 @@ This will:
 
 ### Command-Line Arguments (Optional)
 You can modify `Scraper.py` to accept command-line arguments for more control, such as specifying a particular league or fixture to process.
-For a solution right now, use TestScraper.py.
+For a solution right now, use TargettedScraper.py.
 
 ## Modules and Components
 
@@ -185,7 +185,7 @@ For a solution right now, use TestScraper.py.
 │       ├── CreateStaticPlayerInfoTable.py
 │       ├── ExportPlayerInfo.py
 │       └── InsertStaticPlayerInfo.py
-│   ├── columnChecker.py
+│   ├── ColumnChecker.py
 │   ├── DatabaseHelper.py
 │   ├── reconstructor.py
 │   └── SqlConnector.py
@@ -200,7 +200,7 @@ For a solution right now, use TestScraper.py.
 │   └──SportCategory.py
 ├── README.md
 ├── Main.py
-└── TestScraper.py
+└── TargettedScraper.py
 ```
 
 

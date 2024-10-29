@@ -22,14 +22,14 @@ def main():
     scraper = Scraper()
 
     # Specify the fixture IDs you want to test
-    test_fixture_ids = [10343, 10344, 10064, 10185, 10123, 9923] #TODO Check this website for fixture IDs: https://mc.championdata.com/data/competitions.json
+    target_fixture_ids = [10343, 10344, 10064, 10185, 10123, 9923] #TODO Check this website for fixture IDs: https://mc.championdata.com/data/competitions.json
 
     # Fetch leagues
     leagues_df, _ = League.fetch_leagues()
     print(f"Fetched {len(leagues_df)} leagues.")
 
-    # Filter leagues to only include the ones with fixture IDs in test_fixture_ids
-    test_leagues = leagues_df[leagues_df['id'].isin(test_fixture_ids)]
+    # Filter leagues to only include the ones with fixture IDs in target_fixture_ids
+    test_leagues = leagues_df[leagues_df['id'].isin(target_fixture_ids)]
 
     # Check if test_leagues is empty
     if test_leagues.empty:
