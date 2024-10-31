@@ -1,0 +1,7 @@
+# Ignore log files
+error.log
+info.log
+
+# Ignore everything in /Logs and /Backups directories
+/Logs/
+/Backups/
